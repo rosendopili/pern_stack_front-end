@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
   componentDidMount = () => {
-    fetch("http://localhost:3030/projects")
+    fetch("http://3.128.207.142:3030/projects")
       .then(res => {
         return res.json();
       })
@@ -33,7 +33,7 @@ class App extends Component {
           return(
             <div className="projectCard">
             <h2 className="projectName">{project.name}</h2>
-            <img className="projectImage" src={project.url}/> 
+            <img className="projectImage" src={project.url} alt="project"/> 
             <p className="projectDescription">
               {project.description}
             </p>
